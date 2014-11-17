@@ -192,36 +192,69 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-7">
+
+                    <p class="">Retrieve all item.</p>
                     <pre class="darkred">
                         <code>
-    var Project = sequelize.define('Project', {
-        title: Sequelize.STRING,
-        description: Sequelize.TEXT
-    })</code>
+    $ curl http://api.gitftomaticapp.com/item </code>
+                    </pre>
+                    <p class="">Example of retrieving all items in JSON format:</p>
+                    <pre class="darkred">
+                        <code>
+    [   {"id":1,
+        "name":"Shoes",
+        "minPrice":"100000.00",
+        "maxPrice":"2000000.00",
+        "description":"Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
+        "imgUrl":"001.jpg",
+        "tag":["Male","Female","Kids","Teenager","Adult","Elder","Fashion","Birthday"],
+        "createdAt":"2014-11-17T06:24:16.299Z",
+        "updatedAt":"2014-11-17T06:24:16.299Z"}
+    ]</code>
                     </pre>
 
+                    <p class="">Retrieve a Random Item.</p>
                     <pre class="darkred">
                         <code>
-    var Project = sequelize.define('Project', {
-        title: Sequelize.STRING,
-        description: Sequelize.TEXT
-    })</code>
+    $ curl http://api.giftomaticapp.com/item/random </code>
+                    </pre>
+                    <p class="">Example of retrieving a Random Item in JSON format:</p>
+                    <pre class="darkred">
+                        <code>
+    [   {"id":37,
+        "name":"Tool Box",
+        "minPrice":"100000.00",
+        "maxPrice":"500000.00",
+        "description":"Accidents happen when you least expect it. A box ful of tools for every worst scenario that might happen.",
+        "imgUrl":"046.jpg",
+        "tag":["Male","Adult","Elder","Birthday"],
+        "createdAt":"2014-11-17T06:24:16.306Z",
+        "updatedAt":"2014-11-17T06:24:16.306Z"}
+    ]</code>
                     </pre>
 
+                    <p class="">Retrieve all Threads.</p>
                     <pre class="darkred">
                         <code>
-    var Project = sequelize.define('Project', {
-        title: Sequelize.STRING,
-        description: Sequelize.TEXT
-    })</code>
+    $ curl http://api.giftomaticapp.com/item/thread </code>
                     </pre>
-
+                    <p class="">Example of retrieving all Threads in JSON format:</p>
                     <pre class="darkred">
                         <code>
-    var Project = sequelize.define('Project', {
-        title: Sequelize.STRING,
-        description: Sequelize.TEXT
-    })</code>
+    [   {"id":1,
+        "title":"fghhjjj",
+        "createdAt":"2014-11-17T06:50:02.575Z",
+        "updatedAt":"2014-11-17T06:50:02.575Z",
+        "Posts":[   {"id":1,
+                    "title":"fghhjjj",
+                    "content":"vvvbbjjj",
+                    "createdAt":"2014-11-17T06:50:02.584Z",
+                    "User":     {"id":1,
+                                "username":"Joko Doe"}
+                    }
+                ]
+        }
+    ]</code>
                     </pre>
                 </div>
                 <div class="col-md-3"></div>

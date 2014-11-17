@@ -20,6 +20,7 @@ body {
 p {
     font-size: 14px;
     line-height: 1.75;
+    color: #ccc;
 }
 
 p.large {
@@ -63,7 +64,7 @@ pre {
     white-space: -o-pre-wrap;              /* Opera 7 and up */
     word-wrap: break-word;                 /* IE 5.5+ and up */
     overflow: auto;
-    width: 650px;
+    width: 700px;
     padding: 0.1em 0.5em 0.3em 0.7em;
     border-left: 11px solid #222222;
     margin: 1.7em 0 1.7em 0.3em;
@@ -74,7 +75,15 @@ pre {
     color: #ccc;
 }
 
-.darkred{
+.var {
+    color: #7fe22a;
+}
+
+.args {
+    color: #52d9d0;
+}
+
+.darkred {
     background-color: #65221d;
 }
 

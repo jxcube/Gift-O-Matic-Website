@@ -56,6 +56,28 @@ h6 {
     font-weight: 700;
 }
 
+pre {    
+    white-space: pre-wrap;                 /* CSS3 browsers  */
+    white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
+    white-space: -pre-wrap;                /* Opera 4 thru 6 */
+    white-space: -o-pre-wrap;              /* Opera 7 and up */
+    word-wrap: break-word;                 /* IE 5.5+ and up */
+    overflow: auto;
+    width: 650px;
+    padding: 0.1em 0.5em 0.3em 0.7em;
+    border-left: 11px solid #222222;
+    margin: 1.7em 0 1.7em 0.3em;
+    text-align: left;
+    font-family: "Courier New", Courier, monospace, sans-serif;
+    line-height: 1.6em;
+    font-size: 11px;
+    color: #ccc;
+}
+
+.darkred{
+    background-color: #65221d;
+}
+
 .img-centered {
     margin: 0 auto;
 }
@@ -368,12 +390,20 @@ section#api {
     background-repeat: no-repeat;
 }
 
+section#docs {
+    background-color: #65221d;
+}
+
+section#docs .section-heading {
+    color: #d6e1e0;
+}
+
 section#api .section-heading {
     color: #d6e1e0;
 }
 
 section#policy {
-    background-color: #65221d;
+    background-color: #222;
 }
 
 section#policy .section-heading {

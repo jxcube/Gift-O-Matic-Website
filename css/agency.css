@@ -75,12 +75,24 @@ pre {
     color: #ccc;
 }
 
+.title {
+    font-size: 15px;
+}
+
+.para {
+    font-size: 12px;
+}
+
 .var {
     color: #7fe22a;
 }
 
-.args {
+.sys {
     color: #52d9d0;
+}
+
+.url {
+    color: #1e67ed;
 }
 
 .darkred {

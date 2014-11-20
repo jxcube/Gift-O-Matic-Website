@@ -24,7 +24,7 @@
 	    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	</head>
 
@@ -152,27 +152,27 @@
     		<div class="row">
 				  <div class="col-md-2"></div>
 				  <div class="col-md-7">
-				  <h4 class="section-subheading text-muted">
-				  	Jaxcube provides these APIs so developers can use data from Gift-o-Matic in new and extreme ways. At the moment we only have limited APIs, but this list will grow over time.</h4>
+				  <p class="para">
+				  	Jaxcube provides these APIs so developers can use data from Gift-o-Matic in new and extreme ways. At the moment we only have limited APIs, but this list will grow over time.</p>
 				  <h3 class="section-subheading text-muted">
 				  	Gift-o-Matic Web APIs available</h3>
-				  <h4 class="section-subheading text-muted">
+				  <p class="para">
 				  	Item: Gift-o-Matic provides methods to fetch information for each Gift-o-Matic items.<br>
 					Thread: Gift-o-Matic provides methods to fetch threads data in the database.<br>
-					Post: Gift-o-Matic provides API calls to fetch posts data in the database.<br>
+					Post: Gift-o-Matic provides API calls to fetch posts data in the database.<br></p>
 				  <h3 class="section-subheading text-muted">
 				  	Output Formats</h3>
-				  <h4 class="section-subheading text-muted">
+				  <p class="para">
 				  	All API calls take the form http://api.giftomaticapp.com/<br>
 					Format:<br><br>
 					JSON - The output will be returned in the JSON format<br><br>					
-					If you do not specify a format, your results will be returns in the JSON format.</h4>
+					If you do not specify a format, your results will be returns in the JSON format.</p>
 				   <h3 class="section-subheading text-muted">Gift-o-Matic OpenID Provider</h3>
-				   <h4 class="section-subheading text-muted">Gift-o-Matic can act as an OpenID provider. This allows your application to authenticate a user's Gift-o-MaticID without requiring them to enter their Gift-o-Matic username or password on your site (which would be a violation of the API Terms of Use.) Just download an OpenID library for your language and platform of choice and use http://Gift-o-Maticcommunity.com/openid as the provider. The returned Claimed ID will contain the user's 64-bit Gift-o-MaticID.</h4>
+				   <p class="para">Gift-o-Matic can act as an OpenID provider. This allows your application to authenticate a user's Gift-o-MaticID without requiring them to enter their Gift-o-Matic username or password on your site (which would be a violation of the API Terms of Use.) Just download an OpenID library for your language and platform of choice and use http://Gift-o-Maticcommunity.com/openid as the provider. The returned Claimed ID will contain the user's 64-bit Gift-o-MaticID.</p>
 
 				   <h3 class="section-subheading text-muted">Jaxcube Brand and Links</h3>
-				   <h4 class="section-subheading text-muted">Each page that uses the Gift-o-Matic Web API must contain a link to http://Gift-o-Maticpowered.com with the text "Powered by Gift-o-Matic". We suggest that you put this link in your footer so it is out of the way but still visible to interested users.<br>
-					If you are using OpenID on your site, we request that you use one of the following buttons as your link to the Gift-o-Matic sign in page. These images represent the Gift-o-Matic brand to users, underscoring that Gift-o-Matic account credentials may be used to sign in to your site.</h4
+				   <p class="para">Each page that uses the Gift-o-Matic Web API must contain a link to http://Gift-o-Maticpowered.com with the text "Powered by Gift-o-Matic". We suggest that you put this link in your footer so it is out of the way but still visible to interested users.<br>
+					If you are using OpenID on your site, we request that you use one of the following buttons as your link to the Gift-o-Matic sign in page. These images represent the Gift-o-Matic brand to users, underscoring that Gift-o-Matic account credentials may be used to sign in to your site.</p>
 				  </div>
 				  <div class="col-md-3"></div>
 			</div>
@@ -192,70 +192,146 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-7">
-
-                    <p class="">Retrieve all item.</p>
+                    <p clas="para">We are inviting third-party developers to use our Gift-o-Matic data for their purpose hoping to help.</p><br>
+                    <p class="title">Retrieving all item</p>
+                    <p class="para">In here, retireving <b><i>all</i></b> items inside our database is as easy as one GET request transmission.</p>
                     <pre class="darkred">
                         <code>
-    $ curl http://api.gitftomaticapp.com/item </code>
+    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item</span> </code>
                     </pre>
-                    <p class="">Example of output in JSON format on retrieving all items:</p>
+                    <p class="para">Example of output in JSON format on retrieving all items:</p>
                     <pre class="darkred">
                         <code>
-    [   {"id":1,
-        "name":"Shoes",
-        "minPrice":"100000.00",
-        "maxPrice":"2000000.00",
-        "description":"Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
-        "imgUrl":"001.jpg",
-        "tag":["Male","Female","Kids","Teenager","Adult","Elder","Fashion","Birthday"],
-        "createdAt":"2014-11-17T06:24:16.299Z",
-        "updatedAt":"2014-11-17T06:24:16.299Z"}
+    [   {"<span class="var">id</span>":1,
+        "<span class="var">name</span>":"Shoes",
+        "<span class="var">minPrice</span>":"100000.00",
+        "<span class="var">maxPrice</span>":"2000000.00",
+        "<span class="var">description</span>":"Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
+        "<span class="var">imgUrl</span>":"001.jpg",
+        "<span class="var">tag</span>":["Male","Female","Kids","Teenager","Adult","Elder","Fashion","Birthday"],
+        "<span class="var">createdAt</span>":"2014-11-17T06:24:16.299Z",
+        "<span class="var">updatedAt</span>":"2014-11-17T06:24:16.299Z"}
     ]</code>
                     </pre>
 
-                    <p class="">Retrieve a Random Item.</p>
+                    <p class="title">Retrieve an item by ID.</p>
+                    <p class="para">This function will provide somesort technique of finding an item by its relevant ID and retrieve it.</p>
                     <pre class="darkred">
                         <code>
-    $ curl http://api.giftomaticapp.com/item/random </code>
+    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/:id</span>
+        Example:
+    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/23</span> </code>                    
                     </pre>
-                    <p class="">Example of output in JSON format on retrieving a Random Item:</p>
+                    <p class="para">Example of output in JSON format on retrieving a specific item by ID:
                     <pre class="darkred">
                         <code>
-    [   {"id":37,
-        "name":"Tool Box",
-        "minPrice":"100000.00",
-        "maxPrice":"500000.00",
-        "description":"Accidents happen when you least expect it.",
-        "imgUrl":"046.jpg",
-        "tag":["Male","Adult","Elder","Birthday"],
-        "createdAt":"2014-11-17T06:24:16.306Z",
-        "updatedAt":"2014-11-17T06:24:16.306Z"}
+    [   {"<span class="var">id</span>":23,
+        "<span class="var">name</span>":"Kitchen Utensil",
+        "<span class="var">minPrice</span>":"50000.00",
+        "<span class="var">maxPrice</span>":"650000.00",
+        "<span class="var">description</span>":"For someone who loves cooking, it can't be any more perfect gift than this.",
+        "<span class="var">imgUrl</span>":"020.jpg",
+        "<span class="var">tag</span>":["Female","Teenager","Adult","Elder","Food","Birthday"],
+        "<span class="var">createdAt</span>":"2014-11-20T04:52:46.690Z",
+        "<span class="var">updatedAt</span>":"2014-11-20T04:52:46.690Z"}
     ]</code>
                     </pre>
 
-                    <p class="">Retrieve all Threads.</p>
+                    <p class="title">Retrieve a Random Item.</p>
+                    <p class="para">This function will return one random item. It follows our algorithm on resulting this <i>randomness</i> behaviour.<br>
+                    The below example of JSON file shows us an Item with 37 as its ID.</p>
                     <pre class="darkred">
                         <code>
-    $ curl http://api.giftomaticapp.com/item/thread </code>
+    $ <span class="sys">curl</span> <span class="url">http://api.giftomaticapp.com/item/random</span> </code>
                     </pre>
-                    <p class="">Example of output in JSON format on retrieving all Threads:</p>
+                    <p class="para">Example of output in JSON format on retrieving a Random Item:</p>
                     <pre class="darkred">
                         <code>
-    [   {"id":1,
-        "title":"fghhjjj",
-        "createdAt":"2014-11-17T06:50:02.575Z",
-        "updatedAt":"2014-11-17T06:50:02.575Z",
-        "Posts":[   {"id":1,
-                    "title":"fghhjjj",
-                    "content":"vvvbbjjj",
-                    "createdAt":"2014-11-17T06:50:02.584Z",
-                    "User":     {"id":1,
-                                "username":"Joko Doe"}
-                    }
-                ]
+    [   {"<span class="var">id</span>":37,
+        "<span class="var">name</span>":"Tool Box",
+        "<span class="var">minPrice</span>":"100000.00",
+        "<span class="var">maxPrice</span>":"500000.00",
+        "<span class="var">description</span>":"Accidents happen when you least expect it.",
+        "<span class="var">imgUrl</span>":"046.jpg",
+        "<span class="var">tag</span>":["Male","Adult","Elder","Birthday"],
+        "<span class="var">createdAt</span>":"2014-11-17T06:24:16.306Z",
+        "<span class="var">updatedAt</span>":"2014-11-17T06:24:16.306Z"}
+    ]</code>
+                    </pre>
+
+                    <p class="title">Retrieve all Threads.</p>
+                    <p class="para">This function will retrieve all Threads available on the database. It includes its post replies embedded in the JSON format.</p>
+                    <pre class="darkred">
+                        <code>
+    $ <span class="sys">curl</span> <span class="url">http://api.giftomaticapp.com/item/thread</span> </code>
+                    </pre>
+                    <p class="para">Example of output in JSON format on retrieving all Threads:</p>
+                    <pre class="darkred">
+                        <code>
+    [   {   "<span class="var">id</span>":1,
+            "<span class="var">title</span>":"New Thread",
+            "<span class="var">createdAt</span>":"2014-11-20T05:03:29.003Z",
+            "<span class="var">updatedAt</span>":"2014-11-20T05:03:29.003Z",
+            "<span class="var">Posts</span>":[   {"<span class="var">id</span>":1,
+                            "<span class="var">title</span>":"New Thread",
+                            "<span class="var">content</span>":"This is a new thread",
+                            "<span class="var">createdAt</span>":"2014-11-20T05:03:29.070Z",
+                            "<span class="var">User</span>": {"<span class="var">id</span>":1,
+                                        "<span class="var">username</span>":"Joko Doe"}
+                        }
+                    ]
+        },
+        {   "<span class="var">id</span>":2,
+            "<span class="var">title</span>":"2nd Thread",
+            "<span class="var">createdAt</span>":"2014-11-20T05:04:11.286Z",
+            "<span class="var">updatedAt</span>":"2014-11-20T05:04:11.286Z",
+            "<span class="var">Posts</span>":[   {"<span class="var">id</span>":2,
+                            "<span class="var">title</span>":"2nd Thread",
+                            "<span class="var">content</span>":"This is a 2nd thread by Joko Doe",
+                            "<span class="var">createdAt</span>:"2014-11-20T05:04:11.365Z",
+                            "<span class="var">User</span>": {"<span class="var">id</span>":1,
+                                        "<span class="var">username</span>":"Joko Doe"}
+                        }
+                    ]
         }
     ]</code>
                     </pre>
+
+                    <p class="title">Retrieve a Thread by ID.</p>
+                    <p class="para">Similiar with the Item retrieval by ID, this function will return a Thread that has the same ID as requested.<br>
+                    The below example of JSON file shows us the Thread with 3 as its ID.</p>
+                    <pre class="darkred">
+                        <code>
+    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/thread/:id</span>
+        Example:
+    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/3</span> </code>                    
+                    </pre>
+                    <p class="para">Example of output in JSON format on retrieving a specific thread by ID:
+                    <pre class="darkred">
+                        <code>
+    [   {   "<span class="var">id</span>":3,
+            "<span class="var">title</span>":"wedding anniversary?",
+            "<span class="var">createdAt</span>":"2014-11-20T05:06:00.752Z",
+            "<span class="var">updatedAt</span>":"2014-11-20T05:06:00.752Z",
+            "<span class="var">Posts</span>":[   {"id":3,
+                         "<span class="var">title</span>":"wedding anniversary?",
+                         "<span class="var">content</span>":"So i want to buy my wife a present for our 3rd wedding anniversary, any gift sugestion?",
+                         "<span class="var">createdAt</span>":"2014-11-20T05:06:00.820Z",
+                         "<span class="var">User</span>":    {"<span class="var">id</span>":1,
+                                     "<span class="var">username</span>":"Joko Doe"}},
+                         {"<span class="var">id</span>":4,
+                          "<span class="var">title</span>":"wedding anniversary?",
+                          "<span class="var">content</span>":"i think you should buy your wife a new car :)",
+                          "<span class="var">createdAt</span>":"2014-11-20T05:09:26.491Z",
+                          "<span class="var">User</span>":   {"<span class="var">id</span>":2,
+                                     "<span class="var">username</span>":"Emily"}
+                         }
+                    ]
+        }
+    ]</code>
+                    </pre>
+                    <p class="para">This list of APIs will still grow over time as we will always add more features of Gift-o-Matic's and improve overall bugs and suggestions from users based on reviews in the future.</p>
+
                 </div>
                 <div class="col-md-3"></div>
             </div>
@@ -393,7 +469,7 @@
 	      </div>
 	      <div class="modal-footer">
 	          <div class="col-md-12">
-	          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	          <button class="btn" data-dismiss="modal" aria-h<span class="var">id</span>den="true">Cancel</button>
 			  </div>	
 	      </div>
 	  </div>

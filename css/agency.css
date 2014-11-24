@@ -57,38 +57,41 @@ h6 {
     font-weight: 700;
 }
 
-/*pre {    
+pre {    
     white-space: pre-wrap;                 /* CSS3 browsers  */
     white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
     white-space: -pre-wrap;                /* Opera 4 thru 6 */
     white-space: -o-pre-wrap;              /* Opera 7 and up */
     word-wrap: break-word;                 /* IE 5.5+ and up */
-    overflow: auto;
-    width: 700px;
-    padding: 0.1em 0.5em 0.3em 0.7em;
-    border-left: 11px solid #222222;
     margin: 1.7em 0 1.7em 0.3em;
-    text-align: left;
-    font-family: "Courier New", Courier, monospace, sans-serif;
     line-height: 1.6em;
     font-size: 11px;
-    color: #ccc;
-}*/
+    background: #222222;
+    width: 700px;
+    padding: 0.1em 0.5em 0.3em 0.7em;
+    border-left: 11px solid #fff;
 
+    /*overflow: auto;
+    
+    font-family: "Courier New", Courier, monospace, sans-serif;
+    text-align: left;
+    */
+}
+.para {
+    font-size: 12px;
+    color: #fff;
+}
+
+.sys {
+    color: #1e67ed;
+}
+/*
 .title {
     font-size: 15px;
 }
 
-.para {
-    font-size: 12px;
-}
-
 .var {
     color: #7fe22a;
-}
-
-.sys {
-    color: #52d9d0;
 }
 
 .url {
@@ -97,7 +100,7 @@ h6 {
 
 .darkred {
     background-color: #65221d;
-}
+}*/
 
 .img-centered {
     margin: 0 auto;

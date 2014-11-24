@@ -16,7 +16,7 @@
 		<!-- CSS -->
     	<link href="css/bootstrap.min.css" rel="stylesheet">
     	<link href="css/agency.css" rel="stylesheet">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        <link rel="stylesheet" href="css/default.min.css">
 
     	<!-- Custom Fonts -->
 	    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -38,10 +38,10 @@
             <div class="navbar-header page-scroll">
             	<img src="img/logo.png" height="52" width="56" alt="">        	
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="sr-only">Toggle navigation
+                    <span class="icon-bar">
+                    <span class="icon-bar">
+                    <span class="icon-bar">
                 </button>                
                 <a class="navbar-brand page-scroll" href="#page-top">Gift-O-Matic</a>
             </div>
@@ -197,155 +197,109 @@
                     <p clas="para">We are inviting third-party developers to use our Gift-o-Matic data for their purpose hoping to help.</p><br>
                     <p class="title">Retrieving all item</p>
                     <p class="para">In here, retireving <b><i>all</i></b> items inside our database is as easy as one GET request transmission.</p>
-                    <pre class="darkred">
-                        <code>
-    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item</span> </code>
-                    </pre>
+                    <pre><code>    $ <span class="sys">curl </span>http://api.gitftomaticapp.com/item</code></pre>
                     <p class="para">Example of output in JSON format on retrieving all items:</p>
-                    <pre class="darkred">
-                        <code>
-    [   {"<span class="var">id</span>":1,
-        "<span class="var">name</span>":"Shoes",
-        "<span class="var">minPrice</span>":"100000.00",
-        "<span class="var">maxPrice</span>":"2000000.00",
-        "<span class="var">description</span>":"Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
-        "<span class="var">imgUrl</span>":"001.jpg",
-        "<span class="var">tag</span>":["Male","Female","Kids","Teenager","Adult","Elder","Fashion","Birthday"],
-        "<span class="var">createdAt</span>":"2014-11-17T06:24:16.299Z",
-        "<span class="var">updatedAt</span>":"2014-11-17T06:24:16.299Z"}
-    ]</code>
-                    </pre>
+    <pre><code class="json">    [   {"id":1,
+        "name":"Shoes",
+        "minPrice":"100000.00",
+        "maxPrice":"2000000.00",
+        "description":"Shoes is the key to a complete look. Help them achieve it by giving a pair of shoes!",
+        "imgUrl":"001.jpg",
+        "tag":["Male","Female","Kids","Teenager","Adult","Elder","Fashion","Birthday"],
+        "createdAt":"2014-11-17T06:24:16.299Z",
+        "updatedAt":"2014-11-17T06:24:16.299Z"}
+    ]</code></pre>
 
                     <p class="title">Retrieve an item by ID.</p>
                     <p class="para">This function will provide somesort technique of finding an item by its relevant ID and retrieve it.</p>
-                    <pre class="darkred">
-                        <code>
-    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/:id</span>
+                    <pre><code>    $ <span class="sys">curl </span>http://api.gitftomaticapp.com/item/:id
         Example:
-    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/23</span> </code>                    
-                    </pre>
-                    <p class="para">Example of output in JSON format on retrieving a specific item by ID:
-                    <pre class="darkred">
-                        <code>
-    [   {"<span class="var">id</span>":23,
-        "<span class="var">name</span>":"Kitchen Utensil",
-        "<span class="var">minPrice</span>":"50000.00",
-        "<span class="var">maxPrice</span>":"650000.00",
-        "<span class="var">description</span>":"For someone who loves cooking, it can't be any more perfect gift than this.",
-        "<span class="var">imgUrl</span>":"020.jpg",
-        "<span class="var">tag</span>":["Female","Teenager","Adult","Elder","Food","Birthday"],
-        "<span class="var">createdAt</span>":"2014-11-20T04:52:46.690Z",
-        "<span class="var">updatedAt</span>":"2014-11-20T04:52:46.690Z"}
-    ]</code>
-                    </pre>
+    $ <span class="sys">curl </span>http://api.gitftomaticapp.com/item/23 </code></pre>
+                    <p class="para">Example of output in JSON format on retrieving a specific item by ID:</p>
+<pre><code class="json">    [   {"id":23,
+        "name":"Kitchen Utensil",
+        "minPrice":"50000.00",
+        "maxPrice":"650000.00",
+        "description":"For someone who loves cooking, it can't be any more perfect gift than this.",
+        "imgUrl":"020.jpg",
+        "tag":["Female","Teenager","Adult","Elder","Food","Birthday"],
+        "createdAt":"2014-11-20T04:52:46.690Z",
+        "updatedAt":"2014-11-20T04:52:46.690Z"}
+    ]</code></pre>
 
                     <p class="title">Retrieve a Random Item.</p>
                     <p class="para">This function will return one random item. It follows our algorithm on resulting this <i>randomness</i> behaviour.<br>
                     The below example of JSON file shows us an Item with 37 as its ID.</p>
-                    <pre class="darkred">
-                        <code>
-    $ <span class="sys">curl</span> <span class="url">http://api.giftomaticapp.com/item/random</span> </code>
-                    </pre>
+                    <pre><code>    $ <span class="sys">curl </span>http://api.giftomaticapp.com/item/random </code></pre>
                     <p class="para">Example of output in JSON format on retrieving a Random Item:</p>
-                    <pre class="darkred">
-                        <code>
-    [   {"<span class="var">id</span>":37,
-        "<span class="var">name</span>":"Tool Box",
-        "<span class="var">minPrice</span>":"100000.00",
-        "<span class="var">maxPrice</span>":"500000.00",
-        "<span class="var">description</span>":"Accidents happen when you least expect it.",
-        "<span class="var">imgUrl</span>":"046.jpg",
-        "<span class="var">tag</span>":["Male","Adult","Elder","Birthday"],
-        "<span class="var">createdAt</span>":"2014-11-17T06:24:16.306Z",
-        "<span class="var">updatedAt</span>":"2014-11-17T06:24:16.306Z"}
-    ]</code>
-                    </pre>
-
+<pre><code class="json">    [   {"id":37,
+        "name":"Tool Box",
+        "minPrice":"100000.00",
+        "maxPrice":"500000.00",
+        "description":"Accidents happen when you least expect it.",
+        "imgUrl":"046.jpg",
+        "tag":["Male","Adult","Elder","Birthday"],
+        "createdAt":"2014-11-17T06:24:16.306Z",
+        "updatedAt":"2014-11-17T06:24:16.306Z"}
+    ]</code></pre>
                     <p class="title">Retrieve all Threads.</p>
                     <p class="para">This function will retrieve all Threads available on the database. It includes its post replies embedded in the JSON format.</p>
-                    <pre class="darkred">
-                        <code>
-    $ <span class="sys">curl</span> <span class="url">http://api.giftomaticapp.com/item/thread</span> </code>
-                    </pre>
+                    <pre><code>    $ curl <span class="sys">api.gitftomaticapp.com/thread</span></code></pre>
                     <p class="para">Example of output in JSON format on retrieving all Threads:</p>
-                    <pre class="darkred">
-                        <code>
-    [   {   "<span class="var">id</span>":1,
-            "<span class="var">title</span>":"New Thread",
-            "<span class="var">createdAt</span>":"2014-11-20T05:03:29.003Z",
-            "<span class="var">updatedAt</span>":"2014-11-20T05:03:29.003Z",
-            "<span class="var">Posts</span>":[   {"<span class="var">id</span>":1,
-                            "<span class="var">title</span>":"New Thread",
-                            "<span class="var">content</span>":"This is a new thread",
-                            "<span class="var">createdAt</span>":"2014-11-20T05:03:29.070Z",
-                            "<span class="var">User</span>": {"<span class="var">id</span>":1,
-                                        "<span class="var">username</span>":"Joko Doe"}
+                    <pre><code class="json">    [   {   "id":1,
+            "title":"New Thread",
+            "createdAt":"2014-11-20T05:03:29.003Z",
+            "updatedAt":"2014-11-20T05:03:29.003Z",
+            "Posts":[   {"id":1,
+                            "title":"New Thread",
+                            "content":"This is a new thread",
+                            "createdAt":"2014-11-20T05:03:29.070Z",
+                            "User": {"id":1,
+                                        "username":"Joko Doe"}
                         }
                     ]
         },
-        {   "<span class="var">id</span>":2,
-            "<span class="var">title</span>":"2nd Thread",
-            "<span class="var">createdAt</span>":"2014-11-20T05:04:11.286Z",
-            "<span class="var">updatedAt</span>":"2014-11-20T05:04:11.286Z",
-            "<span class="var">Posts</span>":[   {"<span class="var">id</span>":2,
-                            "<span class="var">title</span>":"2nd Thread",
-                            "<span class="var">content</span>":"This is a 2nd thread by Joko Doe",
-                            "<span class="var">createdAt</span>:"2014-11-20T05:04:11.365Z",
-                            "<span class="var">User</span>": {"<span class="var">id</span>":1,
-                                        "<span class="var">username</span>":"Joko Doe"}
+        {   "id":2,
+            "title":"2nd Thread",
+            "createdAt":"2014-11-20T05:04:11.286Z",
+            "updatedAt":"2014-11-20T05:04:11.286Z",
+            "Posts":[   {"id":2,
+                            "title":"2nd Thread",
+                            "content":"This is a 2nd thread by Joko Doe",
+                            "createdAt:"2014-11-20T05:04:11.365Z",
+                            "User": {"id":1,
+                                        "username":"Joko Doe"}
                         }
                     ]
         }
-    ]</code>
-                    </pre>
-
-                    <p class="title">Retrieve a Thread by ID.</p>
+    ]</code></pre>
+      <p class="title">Retrieve a Thread by ID.</p>
                     <p class="para">Similiar with the Item retrieval by ID, this function will return a Thread that has the same ID as requested.<br>
                     The below example of JSON file shows us the Thread with 3 as its ID.</p>
-                    <pre class="darkred">
-                        <code>
-    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/thread/:id</span>
+                    <pre><code>    $ <span class="sys">curl </span>http://api.gitftomaticapp.com/thread/:id
         Example:
-    $ <span class="sys">curl</span> <span class="url">http://api.gitftomaticapp.com/item/3</span> </code>                    
-                    </pre>
+    $ <span class="sys">curl </span>http://api.gitftomaticapp.com/item/3 </code></pre>
                     <p class="para">Example of output in JSON format on retrieving a specific thread by ID:
-                    <pre class="darkred">
-                        <code>
-    [   {   "<span class="var">id</span>":3,
-            "<span class="var">title</span>":"wedding anniversary?",
-            "<span class="var">createdAt</span>":"2014-11-20T05:06:00.752Z",
-            "<span class="var">updatedAt</span>":"2014-11-20T05:06:00.752Z",
-            "<span class="var">Posts</span>":[   {"id":3,
-                         "<span class="var">title</span>":"wedding anniversary?",
-                         "<span class="var">content</span>":"So i want to buy my wife a present for our 3rd wedding anniversary, any gift sugestion?",
-                         "<span class="var">createdAt</span>":"2014-11-20T05:06:00.820Z",
-                         "<span class="var">User</span>":    {"<span class="var">id</span>":1,
-                                     "<span class="var">username</span>":"Joko Doe"}},
-                         {"<span class="var">id</span>":4,
-                          "<span class="var">title</span>":"wedding anniversary?",
-                          "<span class="var">content</span>":"i think you should buy your wife a new car :)",
-                          "<span class="var">createdAt</span>":"2014-11-20T05:09:26.491Z",
-                          "<span class="var">User</span>":   {"<span class="var">id</span>":2,
-                                     "<span class="var">username</span>":"Emily"}
+                    <pre><code>    [   {   "id":3,
+            "title":"wedding anniversary?",
+            "createdAt":"2014-11-20T05:06:00.752Z",
+            "updatedAt":"2014-11-20T05:06:00.752Z",
+            "Posts":[   {"id":3,
+                         "title":"wedding anniversary?",
+                         "content":"So i want to buy my wife a present for our 3rd wedding anniversary, any gift sugestion?",
+                         "createdAt":"2014-11-20T05:06:00.820Z",
+                         "User":    {"id":1,
+                                     "username":"Joko Doe"}},
+                         {"id":4,
+                          "title":"wedding anniversary?",
+                          "content":"i think you should buy your wife a new car :)",
+                          "createdAt":"2014-11-20T05:09:26.491Z",
+                          "User":   {"id":2,
+                                     "username":"Emily"}
                          }
                     ]
         }
-    ]</code>
-                    </pre>
-
-                    <pre>
-                        <code class="json">
-            [   {"id":4,
-                "name":"Shirt","minPrice":"125000.00",
-                "maxPrice":"750000.00",
-                "description":"Every man and every boy needs unlimited amount of shirt for every possibility everyday.",
-                "imgUrl":"005.jpg",
-                "tag":["Male","Teenager","Adult","Elder","Fashion","Birthday"],
-                "createdAt":"2014-11-20T06:05:16.000Z",
-                "updatedAt":"2014-11-20T06:05:16.000Z"}
-            ]
-                        </code>
-                    </pre>
+    ]</code></pre>
                     <p class="para">This list of APIs will still grow over time as we will always add more features of Gift-o-Matic's and improve overall bugs and suggestions from users based on reviews in the future.</p>
 
                 </div>
@@ -485,7 +439,7 @@
 	      </div>
 	      <div class="modal-footer">
 	          <div class="col-md-12">
-	          <button class="btn" data-dismiss="modal" aria-h<span class="var">id</span>den="true">Cancel</button>
+	          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
 			  </div>	
 	      </div>
 	  </div>
@@ -496,7 +450,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <span class="copyright">Copyright &copy; Jaxcube</span>
+                    <span class="copyright">Copyright &copy; Jaxcube
                 </div>
                 <div class="col-md-6">
                     <ul class="list-inline quicklinks">
@@ -523,10 +477,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-    <script src="js/signup.js"></script>
 
     <!-- PrettyPrinting Javascript-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src="js/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
 	</body>

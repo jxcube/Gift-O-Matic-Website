@@ -152,9 +152,10 @@
 				  <h3 class="section-subheading text-muted">
 				  	Gift-o-Matic Web APIs available</h3>
 				  <p class="para">
-				  	Item: Gift-o-Matic provides methods to fetch information for each Gift-o-Matic items.<br>
-					Thread: Gift-o-Matic provides methods to fetch threads data in the database.<br>
-					Post: Gift-o-Matic provides API calls to fetch posts data in the database.<br></p>
+				  	<a href="#item">Item:</a> Gift-o-Matic provides methods to fetch information for each Gift-o-Matic items.<br>
+                    <a href="#random">Random Item:</a> Gift-o-Matic provides methods to fetch information for each Gift-o-Matic items.<br>
+					<a href="#thread">Thread:</a> Gift-o-Matic provides methods to fetch threads data in the database.<br>
+                    <a href="#filter">Filtering:</a> Gift-o-Matic provides methods to filter items based on a key data in the database. (COMING SOON)<br></p>
 				  <h3 class="section-subheading text-muted">
 				  	Output Formats</h3>
 				  <p class="para">
@@ -186,7 +187,7 @@
             </div>
             <div class="row">
                 <div class="col-md-2"></div>
-                <div class="col-md-7">
+                <div id="item" class="col-md-7">
                     <p clas="para">We are inviting third-party developers to use our Gift-o-Matic data for their purpose hoping to help.</p><br>
                     <p class="title">Retrieving all item</p>
                     <p class="para">In here, retireving <b><i>all</i></b> items inside our database is as easy as one GET request transmission.</p>
@@ -216,7 +217,7 @@
         "description":"For someone who loves cooking, it can't be any more perfect gift than this.",
         "imgUrl":"020.jpg",
         "tag":["Female","Teenager","Adult","Elder","Food","Birthday"],
-        "createdAt":"2014-11-20T04:52:46.690Z",
+        "createdAt":"2014-11-20T04:52:46.690Z",<br id="random">
         "updatedAt":"2014-11-20T04:52:46.690Z"}
     ]</code></pre>
 
@@ -232,7 +233,7 @@
         "description":"Accidents happen when you least expect it.",
         "imgUrl":"046.jpg",
         "tag":["Male","Adult","Elder","Birthday"],
-        "createdAt":"2014-11-17T06:24:16.306Z",
+        "createdAt":"2014-11-17T06:24:16.306Z",<br id="thread">
         "updatedAt":"2014-11-17T06:24:16.306Z"}
     ]</code></pre>
                     <p class="title">Retrieve all Threads.</p>
